@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'betashop/style.css' %} ">
+    </head>
+    <body>
+        {% for item in items  %}
+            <a href="{% url 'betashop:indexItem' item.id %}">
+                <h1>{{ item.name }} | {{ item.description }} | {{ item.price }} </h1>
+            </a>
+            
+        {% endfor %}
+        
+        
+    </body>
+</html>
